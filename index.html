@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kamille 🌸</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffcce5,#ffe6f2,#fff7fb);
+position:relative;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,.82);
+backdrop-filter:blur(8px);
+padding:60px;
+border-radius:30px;
+text-align:center;
+width:90%;
+max-width:760px;
+box-shadow:0 20px 50px rgba(255,105,180,.25);
+z-index:2;
+animation:fadeUp 2s ease;
+border:2px solid rgba(255,255,255,.5);
+}
+
+h1{
+font-size:65px;
+color:#ff3d96;
+margin-bottom:10px;
+text-shadow:0 4px 10px rgba(255,61,150,.2);
+}
+
+h2{
+font-size:30px;
+color:#d63384;
+margin-bottom:25px;
+}
+
+p{
+font-size:22px;
+color:#555;
+line-height:1.8;
+}
+
+button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:50px;
+background:#ff5ca8;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 20px rgba(255,92,168,.25);
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff2d8a;
+}
+
+.flower,.heart,.sparkle{
+position:absolute;
+top:-60px;
+animation:fall linear infinite;
+opacity:.9;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh) rotate(0deg);}
+100%{transform:translateY(115vh) rotate(360deg);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>My Future Wife 💗</h1>
+<h2>Kamille 🌸</h2>
+
+<p>
+<br><br>
+You make me appreciate everything in my life that I met you, you make my life worth living<br>
+Like flowers dancing everywhereee !!!!!!!<br>
+One day you'll be beside me foreverrr.<br><br>
+Soooooo...?
+</p>
+
+<button onclick="love()">Marry Me? 💍</button>
+</div>
+
+<script>
+function love(){
+alert("YAAAAAAYYYYY, now you know who loves you more 😉");
+}
+
+for(let i=0;i<40;i++){
+let flower=document.createElement("div");
+flower.classList.add("flower");
+flower.innerHTML="🌸";
+flower.style.left=Math.random()*100+"vw";
+flower.style.fontSize=(20+Math.random()*25)+"px";
+flower.style.animationDuration=(5+Math.random()*6)+"s";
+flower.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(flower);
+}
+
+for(let i=0;i<25;i++){
+let heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💗";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+heart.style.animationDuration=(6+Math.random()*7)+"s";
+heart.style.animationDelay=Math.random()*6+"s";
+document.body.appendChild(heart);
+}
+
+for(let i=0;i<45;i++){
+let sparkle=document.createElement("div");
+sparkle.classList.add("sparkle");
+sparkle.innerHTML="✨";
+sparkle.style.left=Math.random()*100+"vw";
+sparkle.style.fontSize=(10+Math.random()*18)+"px";
+sparkle.style.animationDuration=(3+Math.random()*4)+"s";
+sparkle.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(sparkle);
+}
+</script>
+
+</body>
+</html>
